@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context="com.example.naris.slacktalk.ChatActivity">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <android.support.design.widget.AppBarLayout
+            android:id="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/appbar_padding_top"
+            android:theme="@style/AppTheme.AppBarOverlay">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="1">
+
+                <ImageButton
+                    android:id="@+id/chatBackButton"
+                    android:background="@drawable/revert"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_height="35dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_width="50dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:text="User"
+                    android:id="@+id/ChatNametextView"
+                    android:layout_gravity="center"
+                    android:layout_weight="0.04"
+                    android:textAlignment="center" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="0.92"
+                    />
+
+                <ImageButton
+                    android:id="@+id/CallimageButton"
+                    android:layout_gravity="right|center"
+                    android:background="@drawable/call"
+                    android:layout_width="35dp"
+                    android:layout_height="35dp" />
+
+                <ImageButton
+                    android:id="@+id/deleteImageButton"
+                    android:layout_gravity="center|right"
+                    android:layout_marginLeft="20dp"
+                    android:tintMode="add"
+                    android:scaleType="fitCenter"
+                    android:layout_height="26dp"
+                    android:background="@drawable/deleteicon"
+                    android:elevation="1dp"
+                    android:layout_width="25dp"
+                    android:layout_marginRight="5dp" />
+
+            </LinearLayout>
+
+        </android.support.design.widget.AppBarLayout>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/chat_background"
+            android:layout_above="@+id/textfield"
+            android:layout_below="@+id/appbar"/>
+
+        <ListView
+            android:id="@+id/ChatlistView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:transcriptMode="alwaysScroll"
+            android:divider="@android:color/transparent"
+            android:dividerHeight="30dp"
+            android:stackFromBottom="true"
+            android:layout_above="@+id/textfield"
+            android:layout_below="@+id/appbar" />
+
+        <LinearLayout
+            android:id="@+id/textfield"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimary">
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/MessageEditText"
+                android:layout_weight="0.97"
+                android:maxLines="3"
+                android:layout_gravity="bottom"
+                android:layout_marginRight="10dp"
+                android:textColor="@android:color/white" />
+
+            <ImageButton
+                android:id="@+id/sendImageButton"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:src="@drawable/send"
+                android:background="@android:color/transparent"
+                android:scaleType="centerInside"
+                android:tint="@android:color/white"
+                android:layout_marginLeft="10dp"
+                android:layout_width="30dp"
+                android:layout_height="30dp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

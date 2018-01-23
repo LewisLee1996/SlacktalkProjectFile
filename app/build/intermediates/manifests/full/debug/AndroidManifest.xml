@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.naris.slacktalk"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="15"
+        android:targetSdkVersion="23" />
+
+    <uses-permission android:name="android.permission.WRITE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_CONTACTS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.naris.slacktalk.WelcomeActivity"
+            android:theme="@style/AppTheme.Startup" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.MULTIWINDOW_LAUNCHER" />
+                <category android:name="android.intent.category.PENWINDOW_LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.naris.slacktalk.ChatActivity"
+            android:label="@string/title_activity_start"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <receiver android:name="com.example.naris.slacktalk.WidgetActivity" >
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widgetadditionalinfo" />
+        </receiver>
+        <receiver
+            android:name="com.example.naris.slacktalk.SmsBroadcastReceiver"
+            android:permission="android.permission.BROADCAST_SMS" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+                <action android:name="android.provider.Telephony.SMS_DELIVER" />
+            </intent-filter>
+        </receiver>
+
+        <!-- BroadcastReceiver that listens for incoming MMS messages -->
+        <receiver
+            android:name="com.example.naris.slacktalk.MmsReceiver"
+            android:permission="android.permission.BROADCAST_WAP_PUSH" >
+            <intent-filter>
+                <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+
+                <data android:mimeType="application/vnd.wap.mms-message" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name="com.example.naris.slacktalk.HeadlessSmsSendService"
+            android:exported="true"
+            android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE" >
+            <intent-filter>
+                <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </service>
+        <service android:name="com.example.naris.slacktalk.SpeechService" >
+        </service>
+        <service android:name="com.example.naris.slacktalk.VoiceControlOutput" >
+        </service>
+        <service
+            android:name="com.example.naris.slacktalk.VoiceDetectionService"
+            android:enabled="true" >
+        </service>
+        <service
+            android:name="com.example.naris.slacktalk.VoiceActivationService"
+            android:enabled="true" >
+        </service>
+
+        <activity
+            android:name="com.example.naris.slacktalk.SpeechInput"
+            android:launchMode="singleTask"
+            android:showOnLockScreen="true"
+            android:theme="@style/AppTheme.SpeechRecognition" />
+        <activity
+            android:name="com.example.naris.slacktalk.VoiceControlInput"
+            android:launchMode="singleTask"
+            android:theme="@style/AppTheme.SpeechRecognition" />
+        <activity android:name="com.example.naris.slacktalk.SetDefaultActivity" >
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SENDTO" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="sms" />
+                <data android:scheme="smsto" />
+                <data android:scheme="mms" />
+                <data android:scheme="mmsto" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.naris.slacktalk.getPermissionActivity" />
+        <activity android:name="com.example.naris.slacktalk.Welcome2Activity" />
+        <activity android:name="com.example.naris.slacktalk.MainActivity" />
+        <activity android:name="com.example.naris.slacktalk.RefreshingActivity" />
+        <activity android:name="com.example.naris.slacktalk.ContactActivity" />
+        <activity
+            android:name="com.example.naris.slacktalk.SettingsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.naris.slacktalk.CreditActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.naris.slacktalk.FAQActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="com.example.naris.slacktalk.HowItWorksActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.enable"
+            android:value="true" />
+        <meta-data
+            android:name="android.intent.category.MULTIWINDOW_LAUNCHER"
+            android:value="true" />
+        <meta-data
+            android:name="com.sec.android.intent.category.MULTIWINDOW_LAUNCHER"
+            android:value="true" />
+"
+        <meta-data
+            android:name="com.samsung.android.sdk.multiwindow.penwindow.enable"
+            android:value="true" />
+    </application>
+
+</manifest>

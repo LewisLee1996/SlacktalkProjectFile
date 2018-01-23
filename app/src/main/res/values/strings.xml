@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">Slacktalk</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_faq">FAQ</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="title_activity_start">Slacktalk</string>
+    <string name="title_activity_faq">FAQ</string>
+    <string name="title_activity_how_it_works">How It Works</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_how_it_work">HowItWorkActivity</string>
+    <string name="_1_the_text_message_isn_apos_t_appearing">1.The text message isn\'t appearing.</string>
+
+
+    <string name="next">NEXT</string>
+    <string name="skip">NAH</string>
+    <string name="start">BEGIN</string>
+    <string name="set">SET</string>
+
+    <string name="slide_1_title">Welcome to SLACKTALK</string>
+
+    <string name="slide_2_title">Eyes on the Road</string>
+
+    <string name="slide_3_title">No more Confusing steps</string>
+
+    <string name="slide_4_title">Begin Journey</string>
+
+    <string name="play_again_desc">To see the welcome slider again, goto Settings -> apps -> welcome slider -> clear data</string>
+    <string name="play_again">Play Again</string>
+
+
+</resources>

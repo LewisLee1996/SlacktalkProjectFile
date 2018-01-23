@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.naris.slacktalk.CreditActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:id="@+id/imageViewMainAbout"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:src="@drawable/aboutactivityicon"
+            android:paddingBottom="30dp"
+            android:paddingTop="30dp"
+            android:layout_height="128dp"
+            android:background="@drawable/iconbackground" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="This app was created and developed by Lee Yong Hong, Phoon Jun Tai and Naris Pillai. The idea of this app was entirely from all 3 members who worked on this project."
+            android:id="@+id/textViewAboutText"
+            android:layout_below="@+id/imageViewMainAbout"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:paddingTop="20dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Phoon Jun Tai"
+            android:id="@+id/textViewPJT"
+            android:layout_below="@+id/textViewLYH"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="5dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Naris Pillaii"
+            android:id="@+id/textViewNP"
+            android:layout_below="@+id/textViewPJT"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="5dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Designing"
+            android:id="@+id/textViewDesign"
+            android:layout_below="@+id/textViewNP"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="27dp"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Naris Pillai"
+            android:id="@+id/textViewName1"
+            android:layout_below="@+id/textViewDesign"
+            android:layout_centerHorizontal="true"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Lee Yong Hong"
+            android:id="@+id/textViewLYH"
+            android:paddingTop="10dp"
+            android:textAlignment="center"
+            android:layout_below="@+id/textViewCoding"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Coding"
+            android:id="@+id/textViewCoding"
+            android:paddingTop="20dp"
+            android:textAlignment="center"
+            android:layout_marginTop="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_below="@+id/textViewAboutText"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Special Thanks to"
+            android:id="@+id/textViewSpecialThanks"
+            android:textAlignment="center"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="24sp"
+            android:layout_below="@+id/textViewName2"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Lee Yong Hong"
+            android:id="@+id/textViewName2"
+            android:textAlignment="center"
+            android:paddingTop="5dp"
+            android:paddingBottom="30dp"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_below="@+id/textViewName1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/flaticonsicon"
+            android:layout_below="@+id/textViewSpecialThanks"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/flaticonimagebutton"
+            android:paddingTop="10dp"
+            android:layout_marginLeft="100dp" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/pixabayicon"
+            android:layout_below="@+id/flaticonimagebutton"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/pixabayimagebutton"
+            android:paddingTop="10dp" />
+
+    </RelativeLayout>
+
+</ScrollView>

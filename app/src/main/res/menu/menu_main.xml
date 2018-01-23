@@ -1,0 +1,35 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.naris.slacktalk.MainActivity">
+    <item
+        android:id="@+id/action_search"
+        android:icon="@drawable/abc_ic_search_api_mtrl_alpha"
+        android:title="Search"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        app:showAsAction="ifRoom|collapseActionView" />
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="104"
+        android:title="@string/action_settings"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_faq"
+        android:orderInCategory="101"
+        android:title="FAQ"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_credit"
+        android:orderInCategory="103"
+        android:title="Credit"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_hiw"
+        android:orderInCategory="102"
+        android:title="How?"
+        app:showAsAction="never" />
+
+</menu>

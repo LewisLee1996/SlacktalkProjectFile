@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:fillViewport="true">
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:context="com.example.naris.slacktalk.FAQActivity"
+        tools:showIn="@layout/activity_faq">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:id="@+id/imageViewFAQIcon"
+            android:src="@drawable/faqicon"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:background="@drawable/iconbackground"
+            android:paddingTop="30dp"
+            android:paddingBottom="30dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="@string/_1_the_text_message_isn_apos_t_appearing"
+            android:id="@+id/textViewQuestion1"
+            android:layout_marginTop="25dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:textAlignment="viewStart"
+            android:singleLine="false"
+            android:layout_below="@+id/imageViewFAQIcon"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Make sure your Sim Card is inserted correctly."
+            android:id="@+id/textViewAnswer1"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/textViewQuestion1"
+            android:layout_alignLeft="@+id/textViewQuestion1"
+            android:layout_alignStart="@+id/textViewQuestion1"
+            android:visibility="visible"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Make sure you have Google Text-To-Speech application in you smartphone and turn on the voice control feature in the settings page."
+            android:id="@+id/textView3"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/textViewQuestion2"
+            android:layout_alignLeft="@+id/textViewQuestion2"
+            android:layout_alignStart="@+id/textViewQuestion2"
+            android:textSize="20sp"
+            android:fontFamily="sans-serif-condensed" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="3.The app crashes every time."
+            android:id="@+id/textViewQuestion3"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/textView3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingTop="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:id="@+id/textViewQuestion4"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/textViewAnswer3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingTop="15dp"
+            android:text="4.Smartphone gets hot while using this app."
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="It is normal for your smartphone to get hot while running heavy process."
+            android:id="@+id/textViewAnswer4"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/textViewQuestion4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="5.My battery drains alot when using the app."
+            android:id="@+id/textViewQuestion5"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/textViewAnswer4"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:paddingTop="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="It is due to the background running process. Reducing the screen brightness could save some juice."
+            android:id="@+id/textView4"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/textViewQuestion5"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="6.My phone hangs when using the app."
+            android:id="@+id/textViewQuestion6"
+            android:layout_below="@+id/textView4"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_alignLeft="@+id/textView4"
+            android:layout_alignStart="@+id/textView4"
+            android:paddingTop="15dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="24sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="A minimum memory of 1gb is required to run this application in order to avoid hangs and crash."
+            android:id="@+id/textViewAnswer6"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:layout_below="@+id/textViewQuestion6"
+            android:layout_alignLeft="@+id/textViewQuestion6"
+            android:layout_alignStart="@+id/textViewQuestion6"
+            android:paddingBottom="20dp"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="2.The voice regnization is not working."
+            android:id="@+id/textViewQuestion2"
+            android:paddingTop="15dp"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:singleLine="false"
+            android:textSize="24sp"
+            android:fontFamily="sans-serif-condensed"
+            android:layout_below="@+id/textViewAnswer1"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="Make sure you reach the minimum Android version requirement(Android 4.4). If you do, then try uninstalling and reinstalling the application."
+            android:id="@+id/textViewAnswer3"
+            android:paddingLeft="@dimen/activity_horizontal_margin"
+            android:paddingRight="@dimen/activity_horizontal_margin"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="20sp"
+            android:layout_below="@+id/textViewQuestion3"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+    </RelativeLayout>
+</ScrollView>
